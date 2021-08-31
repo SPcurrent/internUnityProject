@@ -10,6 +10,8 @@ public class EnemyGenerator : MonoBehaviour
     private float interval;
     //経過時間
     private float time = 0f;
+public GameObject enemyPos;
+public float speed = 1000f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +30,14 @@ public class EnemyGenerator : MonoBehaviour
         if(time > interval)
         {
             //enemyをインスタンス化する(生成する)
-            GameObject enemy = Instantiate(enemyPrefab);
+GameObject enemy = Instantiate(enemyPrefab) as GameObject;
+enemy.transform.position = enemyPos.transform.position;
             //生成した敵の座標を決定する(現状X=0,Y=10,Z=20の位置に出力)
-            enemy.transform.position = new Vector3(0,10,20);
+            //enemy.transform.position = new Vector3(95,5,80);
+
+Vector3 force;
+force = enemyPos.transform.forward * speed;
+enemy.GetComponent<Rigidbody>().AddForce(force);
             //経過時間を初期化して再度時間計測を始める
             time = 0f;
         }

@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 7163154171739805301}
   - component: {fileID: 3469001306732989741}
   - component: {fileID: 736671374588205641}
+  - component: {fileID: 8312070750951293355}
+  - component: {fileID: 1226912312622484705}
+  - component: {fileID: 7363221701475164337}
   m_Layer: 0
   m_Name: rifle_bullet_1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,9 +29,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5055797993725012437}
-  m_LocalRotation: {x: -0.00000003774895, y: -1.1102229e-16, z: 1.11022296e-16, w: 1}
-  m_LocalPosition: {x: 95, y: 1.233, z: 6.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95, y: 1.2331355, z: 6.799993}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,3 +101,42 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &8312070750951293355
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055797993725012437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.1832546
+  m_Height: 0.5
+  m_Direction: 1
+  m_Center: {x: -0.03, y: 0.0022651237, z: 0.042607747}
+--- !u!65 &1226912312622484705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055797993725012437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -0.1, y: 0.1, z: 0.3665092}
+  m_Center: {x: -0.0022112625, y: 0.0022651237, z: 0.042607747}
+--- !u!114 &7363221701475164337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5055797993725012437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eeebf0bf2ad2fe48b001cf8c4009102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
