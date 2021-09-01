@@ -7,7 +7,7 @@ public class bulletBreak : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("BreakBullet",4.0f);
+        Invoke("BreakBullet",3.0f);
     }
 
     void BreakBullet(){
