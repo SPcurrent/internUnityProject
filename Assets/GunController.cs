@@ -16,7 +16,7 @@ public class GunController : MonoBehaviour
     void Update()
     {
       //スペースが押されたとき
-      if (Input.GetKeyDown(KeyCode.Space))
+      if (Input.GetKeyDown(KeyCode.Space) && Gmanager.instance.magazine > 0)
       {
           //ballをインスタンス化して発射
           GameObject createdBullet = Instantiate(bullet) as GameObject;
@@ -28,6 +28,9 @@ public class GunController : MonoBehaviour
             force = bulletPos.transform.forward * speed;
             // Rigidbodyに力を加えて発射
             createdBullet.GetComponent<Rigidbody>().AddForce(force);
+
+          //斬弾数を減らす
+            Gmanager.instance.magazine -= 1;
       }
     }
 }

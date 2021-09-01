@@ -17,7 +17,7 @@ public float speed = 1000f;
     void Start()
     {
         //時間間隔を決定する
-        interval = 5f;
+        interval = 3f;
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public float speed = 1000f;
         time += Time.deltaTime;
 
         //経過時間が生成時間になったとき(生成時間より大きくなったとき)
-        if(time > interval)
+        if(time > interval && Gmanager.instance.cray > 0)
         {
             //enemyをインスタンス化する(生成する)
 GameObject enemy = Instantiate(enemyPrefab) as GameObject;
@@ -40,6 +40,9 @@ force = enemyPos.transform.forward * speed;
 enemy.GetComponent<Rigidbody>().AddForce(force);
             //経過時間を初期化して再度時間計測を始める
             time = 0f;
+
+            //残りクレー数を減らす
+            Gmanager.instance.cray -= 1;
         }
     }
 }
