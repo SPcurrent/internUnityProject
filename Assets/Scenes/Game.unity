@@ -13749,7 +13749,7 @@ MonoBehaviour:
   rotationSpeed: 0.07
   max_rotation_x: 20
   min_rotation_x: 0
-  max_rotation_y: 35
+  max_rotation_y: 25
 --- !u!4 &963332705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456749495845788817, guid: 9d61301d2470a3b47bcfc190f523a10b, type: 3}
@@ -23846,6 +23846,7 @@ MonoBehaviour:
   bulletPos: {fileID: 341553829}
   speed: 25000
   clip: {fileID: 8300000, guid: bd67058a6079faf40b2dbfb35ea160b1, type: 3}
+  flashEffect: {fileID: 5011292710651844235, guid: bd1b521aab5f8204c9f31a5d0de54df8, type: 3}
 --- !u!4 &1701429905
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GunController : MonoBehaviour
     public float speed = 1500f;
     // Start is called before the first frame update
     public AudioClip clip;
+    public GameObject flashEffect;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +35,8 @@ public class GunController : MonoBehaviour
             Gmanager.instance.magazine -= 1;
 
           GetComponent<AudioSource>().PlayOneShot(clip);
+          GameObject effect = Instantiate(flashEffect) as GameObject;
+          effect.transform.position = bulletPos.transform.position;
       }
     }
 }
