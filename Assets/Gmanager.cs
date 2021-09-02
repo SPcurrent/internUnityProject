@@ -10,6 +10,7 @@ public class Gmanager : MonoBehaviour
   public int bullet = 0;
   public int cray = 25;
   public int geneCray = 0;
+  public AudioSource audioSource = null;
 
   private void Awake(){
     if(instance == null){
@@ -19,4 +20,12 @@ public class Gmanager : MonoBehaviour
       Destroy(this.gameObject);
     }
   }
+/*
+  public void PlaySE(AudioClip clip){
+    if(audioSource != null){
+      audioSource.PlayOneShot(clip);
+    }else{
+      Debug.Log("no AudioSource");
+    }
+  }*/
 }

@@ -7,6 +7,7 @@ public class HitController : MonoBehaviour
 {
   //倒したときのエフェクト
     public GameObject breakEffect;
+    //public AudioClip itemSE;
 
   //スコア計測
     //public Text Scoretext;
@@ -35,6 +36,10 @@ public class HitController : MonoBehaviour
 
           //エフェクトを発生させる
             GenerateEffect();
+
+            //if(Gmanager.instance != null){
+              //Gmanager.instance.PlaySE(itemSE);
+            //}
       }
   }
 

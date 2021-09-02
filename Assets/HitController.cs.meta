@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - breakEffect: {fileID: 8845941869021330203, guid: cb22b46a6ee22c1479dbb87f8c1f4880, type: 3}
+  - itemSE: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
