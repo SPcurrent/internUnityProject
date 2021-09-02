@@ -8,6 +8,7 @@ public class Gmanager : MonoBehaviour
   public int score;
   public int magazine = 50;
   public int cray = 25;
+  public int geneCray = 0;
 
   private void Awake(){
     if(instance == null){

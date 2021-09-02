@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class crayNum : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class crayNum : MonoBehaviour
       if(oldCray != Gmanager.instance.cray){
         crayText.text = Gmanager.instance.cray+"/25";
         oldCray = Gmanager.instance.cray;
+      }
+      if(Gmanager.instance.cray == 0){
+        SceneManager.LoadScene("result");
       }
     }
 }

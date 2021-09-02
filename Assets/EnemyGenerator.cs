@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyGenerator : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public float speed = 1000f;
         time += Time.deltaTime;
 
         //経過時間が生成時間になったとき(生成時間より大きくなったとき)
-        if(time > interval && Gmanager.instance.cray > 0)
+        if(time > interval && Gmanager.instance.geneCray < 25)
         {
             //enemyをインスタンス化する(生成する)
 GameObject enemy = Instantiate(enemyPrefab) as GameObject;
@@ -40,6 +41,10 @@ force = enemyPos.transform.forward * speed;
 enemy.GetComponent<Rigidbody>().AddForce(force);
             //経過時間を初期化して再度時間計測を始める
             time = 0f;
+            
+            Gmanager.instance.geneCray += 1;
         }
+
+
     }
 }
