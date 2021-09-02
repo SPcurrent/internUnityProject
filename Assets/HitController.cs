@@ -29,7 +29,7 @@ public class HitController : MonoBehaviour
           //Scoretext.text = string.Format("score:{0}", score);
 
           //スコア加算
-          Gmanager.instance.score += 4;
+          Gmanager.instance.score += 3;
 
           //エフェクトを発生させる
             GenerateEffect();
