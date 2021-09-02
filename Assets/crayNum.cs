@@ -29,7 +29,12 @@ public class crayNum : MonoBehaviour
         oldCray = Gmanager.instance.cray;
       }
       if(Gmanager.instance.cray == 0){
-        SceneManager.LoadScene("result");
+        Invoke("GotoResult", 2.0f);
+
       }
+    }
+
+    void GotoResult(){
+      SceneManager.LoadScene("result");
     }
 }
