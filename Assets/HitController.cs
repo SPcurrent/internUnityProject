@@ -31,6 +31,7 @@ public class HitController : MonoBehaviour
           //スコア加算
           Gmanager.instance.score += 3;
           Gmanager.instance.cray -= 1;
+          Gmanager.instance.bullet += 1;
 
           //エフェクトを発生させる
             GenerateEffect();

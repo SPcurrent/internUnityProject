@@ -12,5 +12,6 @@ public class bulletBreak : MonoBehaviour
 
     void BreakBullet(){
       Destroy(gameObject);
+      Gmanager.instance.bullet += 1;
     }
 }

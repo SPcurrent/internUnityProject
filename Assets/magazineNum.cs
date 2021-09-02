@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class magazineNum : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class magazineNum : MonoBehaviour
       if(oldMagazine != Gmanager.instance.magazine){
         magazineText.text = Gmanager.instance.magazine+"/50";
         oldMagazine = Gmanager.instance.magazine;
+      }
+      if(Gmanager.instance.bullet == 50){
+        SceneManager.LoadScene("result");
       }
     }
 }
