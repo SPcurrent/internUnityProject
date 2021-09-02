@@ -25,7 +25,7 @@ public class magazineNum : MonoBehaviour
     {
       if(oldMagazine != Gmanager.instance.magazine){
         magazineText.text = Gmanager.instance.magazine+"/50";
-        oldMagazine = Gmanager.instance.score;
+        oldMagazine = Gmanager.instance.magazine;
       }
     }
 }

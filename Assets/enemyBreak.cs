@@ -12,5 +12,6 @@ public class enemyBreak : MonoBehaviour
 
     void BreakEnemy(){
       Destroy(gameObject);
+      Gmanager.instance.cray -= 1;
     }
 }

@@ -40,9 +40,6 @@ force = enemyPos.transform.forward * speed;
 enemy.GetComponent<Rigidbody>().AddForce(force);
             //経過時間を初期化して再度時間計測を始める
             time = 0f;
-
-            //残りクレー数を減らす
-            Gmanager.instance.cray -= 1;
         }
     }
 }
