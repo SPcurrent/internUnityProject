@@ -13,7 +13,7 @@ public class score : MonoBehaviour
     void Start()
     {
       if(Gmanager.instance.magazine <=25){
-        nowScore = Gmanager.instance.score + 50 - Gmanager.instance.magazine;
+        nowScore = Gmanager.instance.score + Gmanager.instance.magazine;
       }else{
         nowScore = Gmanager.instance.score;
       }
@@ -31,7 +31,7 @@ public class score : MonoBehaviour
     void Update()
     {
       if(Gmanager.instance.magazine <=25){
-        nowScore = Gmanager.instance.score + 50 - Gmanager.instance.magazine;
+        nowScore = Gmanager.instance.score + Gmanager.instance.magazine;
       }else{
         nowScore = Gmanager.instance.score;
       }
