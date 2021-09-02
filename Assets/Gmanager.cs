@@ -10,7 +10,7 @@ public class Gmanager : MonoBehaviour
   public int bullet = 0;
   public int cray = 25;
   public int geneCray = 0;
-  public AudioSource audioSource = null;
+  //public AudioSource audioSource = null;
 
   private void Awake(){
     if(instance == null){

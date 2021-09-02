@@ -11,6 +11,7 @@ public class GunController : MonoBehaviour
     //弾丸のスピード
     public float speed = 1500f;
     // Start is called before the first frame update
+    public AudioClip clip;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +32,8 @@ public class GunController : MonoBehaviour
 
           //斬弾数を減らす
             Gmanager.instance.magazine -= 1;
+
+          GetComponent<AudioSource>().PlayOneShot(clip);
       }
     }
 }
